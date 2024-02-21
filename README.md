@@ -63,7 +63,7 @@ Unlike the matlab implementation in the paper, only the first roughness converge
 
 ## Access to the Test Datasets used in the Paper
 
-The full data used for the numerical experiment in the paper is available [here](https://ideal.mech.northwestern.edu/software/) (under 'Datasets') upon official request. In this repo, part of the 2D orthotropic mechanical metamaterial dataset is provided under `./data` for quick reproduction of the result of Task II-2 -- (promoting a dataset biased towards high elastic anisotropy -- in the paper.
+The full data used for the numerical experiment in the paper is available [here](https://ideal.mech.northwestern.edu/software/) (under 'Datasets') upon official request. In this repo, part of the 2D orthotropic mechanical metamaterial dataset is provided under `./data` for quick reproduction of the result of Task II-2 &mdash (promoting a dataset biased towards high elastic anisotropy &mdash in the paper.
 
 ## Relevant Publications
 
