@@ -23,13 +23,13 @@ This code is licensed under the MIT license. It is encouraged to use all or port
 ```
 
 
-## Shape Descriptor: Variational Autoencoder
+## Component I. Shape Descriptor (Variational Autoencoder)
 
-Given a massive set of high-dimensional metamaterial unit cells, we distill a compact yet expressive shape descriptor of unit cells through variational autoencoder ([Kingma et al., arXiv, 2013](https://arxiv.org/abs/1312.6114)), which entails data-driven feature extraction through unsupervised representation learning, following Wang et al., CMAME, 2020.
+Given a massive set of high-dimensional metamaterial unit cells, we distill a compact yet expressive shape descriptor of unit cells through variational autoencoder ([Kingma et al., arXiv, 2013](https://arxiv.org/abs/1312.6114)), which entails data-driven feature extraction through unsupervised representation learning, following [Wang et al., CMAME, 2020](https://www.sciencedirect.com/science/article/pii/S0045782520305624).
 
-For the `t-METASET` class in our code, it can take other shape descriptors as well. The choice is subject to the regressor that serves as an active learner in the `t-METASET` procedure. For user-defined low-dimensional descriptors (say less than 10-D), the GP regressor set as default is expected to serve well upon proper feature-wise scaling.
+For the `t-METASET` class included in `main.py`, it can take other shape descriptors as well. The choice is subject to the regressor that serves as an active learner in the `t-METASET` procedure. For user-defined low-dimensional descriptors (say less than 10-D), the GP regressor set as default is expected to serve well upon proper feature-wise scaling.
 
-## Regressor: Gaussian Processes
+## Component II. Regressor (Gaussian Processes)
 
 We disclose that `GP_pytorch.py` includes snippets for the implementation of [Batch Independent Multioutput Gaussian Processes](https://docs.gpytorch.ai/en/stable/examples/03_Multitask_Exact_GPs/Batch_Independent_Multioutput_GP.html) availabe in [gpytorch](https://gpytorch.ai/),
 whose representation reference is:
@@ -40,7 +40,7 @@ In this version, we do not consider any accelerations involved with access to GP
 
 Note that the choice of regressor for the `t-METASET` procedure is not limited by GPs, but open to other surrogate models. It is generally advised to choose the regressor with the shape descriptor taken into account. Since the proposed sampling criteria do not demand uncertainty, a variety of models is allowed to be considered, e.g., standard neural nets.
 
-## Sampler: Determinantal Point Processes
+## Component III. Diversity Sampler (Determinantal Point Processes)
 
 We disclose that `DPP.py` builds on a python translation of Determinantal Point Processes from Alex Kuelsza’s matlab implementation, associated with the following reference:
 
@@ -57,7 +57,7 @@ The exhaustive list of references is available in our paper.
 
 ## The t-METASET Procedure: Python Implementation
 
-The numerical experiment presented in our paper was based on matlab implementation, primarily built on [Kulesza and Taskar, arXiv, 2011](https://arxiv.org/abs/1207.6083) for DPP and [Bostanabad et al. JMD, 2019](https://asmedigitalcollection.asme.org/mechanicaldesign/article/141/11/111402/955350/Globally-Approximate-Gaussian-Processes-for-Big) for GP. The python translation and its numerical results provided here are subject to discrepancies due to several factors, e.g., eigendecomposition by `numpy.linalg.eigh`, GP implementation through `gpytorch`.
+The numerical experiment presented in our paper was based on matlab implementation, primarily built on [Kulesza and Taskar, arXiv, 2011](https://arxiv.org/abs/1207.6083) for DPP and [Bostanabad et al. JMD, 2019](https://asmedigitalcollection.asme.org/mechanicaldesign/article/141/11/111402/955350/Globally-Approximate-Gaussian-Processes-for-Big) for GP. On the other hand, the python translation and its numerical results provided here are subject to discrepancies due to several factors, e.g., eigendecomposition by `numpy.linalg.eigh`, GP implementation through `gpytorch`.
 
 Unlike the matlab implementation, only the first roughness convergence is considered for the example numerical results, conducted for 2D orthotropic mechanical metamaterial dataset (Wang et al., SMO, 2019). In our numerical experiments, we use the precomputed data, whose the effective properties have been fully evaluated, so that we avoid the design evaluation (Xia and Breitkopf, SMO, 2015) that could be time-consuming and focus on the proposed task-aware data acquisition itself. It is important to note that the t-METASET has no access to the property data at the beginning, but will collect samples batch by batch and estimate the properties of unseen unit cells through the learner, which a GP unless replaced otherwise.
 
