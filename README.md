@@ -4,7 +4,7 @@
 This repository is intended to publicly share a Python implementation of the t-METASET framework, 
 proposed in the paper entitled [t-METASET: Task-Aware Acquisition of Metamaterial Datasets through Diversity-based Active Learning](https://asmedigitalcollection.asme.org/mechanicaldesign/article/145/3/031704/1147447/t-METASET-Task-Aware-Acquisition-of-Metamaterial). 
 **t-METASET** is an abbreviation of _task-aware_ METASET, inspired by [METASET](https://asmedigitalcollection.asme.org/mechanicaldesign/article/143/3/031707/1087582/METASET-Exploring-Shape-and-Property-Spaces-for) proposed by Chan et al.
-For general inquiry contact the first author Doksoo Lee (doksoo.lee@northwestern.edu).
+For general inquiry contact either the first author Doksoo Lee (doksoo.lee@northwestern.edu) or the corresponding author Prof. Wei Chen (weichen@northwestern.edu).
 
 ## License
 This code is licensed under the MIT license. It is encouraged to use all or portions for your research or related projects, provided that you include the following citation information, or any alternative forms that give a proper credit to:
