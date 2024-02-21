@@ -32,7 +32,7 @@ For the `t-METASET` class included in `main.py`, it can take other shape descrip
 ## Component II. Regressor (Gaussian Processes)
 
 We disclose that `GP_pytorch.py` includes snippets for the implementation of [Batch Independent Multioutput Gaussian Processes](https://docs.gpytorch.ai/en/stable/examples/03_Multitask_Exact_GPs/Batch_Independent_Multioutput_GP.html) availabe in [gpytorch](https://gpytorch.ai/),
-whose representation reference is:
+whose key reference is:
 
 - Gardner, J., Pleiss, G., Weinberger, K. Q., Bindel, D., & Wilson, A. G. (2018). [Gpytorch: Blackbox matrix-matrix gaussian process inference with gpu acceleration](https://papers.nips.cc/paper/2018/hash/101c673e6e65ea618ce8c964f23f10d6-Abstract.html). Advances in neural information processing systems, 31.
 
