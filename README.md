@@ -67,7 +67,7 @@ The full data used for the numerical experiment in the paper is available [here]
 
 ## Relevant Publications
 
-- Lee, D., Zhang, L., Yu, Y., & Chen, W. (2024). [Deep Neural Operator Enabled Concurrent Multitask Design for Multifunctional Metamaterials under Heterogeneous Fields](https://onlinelibrary.wiley.com/doi/10.1002/adom.202301638). Advanced Optical Materials (accepted).
+- Lee, D., Zhang, L., Yu, Y., & Chen, W. (2024). [Deep Neural Operator Enabled Concurrent Multitask Design for Multifunctional Metamaterials under Heterogeneous Fields](https://arxiv.org/abs/2312.02403). Advanced Optical Materials (accepted).
 - Lee, D. (2023). Data-Driven Inverse Design of Metamaterials: Exploring Complex Physical Fields Beyond Homogenization Assumptions (Doctoral dissertation, Northwestern University).
 - Lee, D., Chen, W., Wang, L., Chan, Y. C., & Chen, W. (2023). [Data‐Driven Design for Metamaterials and Multiscale Systems: A Review](https://onlinelibrary.wiley.com/doi/10.1002/adma.202305254). Advanced Materials, 2305254.
 
